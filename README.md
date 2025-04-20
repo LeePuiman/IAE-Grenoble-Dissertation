@@ -1,0 +1,4 @@
+```Bash
+zsh ./compilate.sh
+```
+
