@@ -1,24 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% USFD Academic Report Template
-% Prof. Roger K. Moore
-% University of Sheffield
-% 30 July 2018
-% Adapted by Loïc Barrault
-% 16 September 2021
-% Adapted by Yu Chen
-% 10/05/2024
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%ATTETION%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%use XeLatex as complile engine
-%%use BibTeX as the bibliography engine
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[12pt,oneside,english]{book}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt,oneside,french]{book}
 \usepackage{lmodern}
 \usepackage{tikz}
-\usepackage{url}  % 让 URL 或 DOI 自动换行
-\usepackage{tipa}
+\usepackage{url}  % Allow URLs or DOIs to break across lines
 \usepackage{alltt}
 \usepackage[margin=1.2in]{geometry}
 \usepackage[toc,page]{appendix}
@@ -26,100 +9,87 @@
 \usepackage[style=apa]{biblatex}
 \usepackage{lipsum}
 \usepackage{tabularx}  
+\usepackage{amssymb}
 \usepackage{svg}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[french]{babel}
 \usepackage{float}
+\usepackage{tocloft}
+\usepackage{etoc}
 \usepackage{caption}
 \usepackage[toc,xindy]{glossaries}
 \usepackage[automake]{glossaries-extra}
 \usepackage{listings}
-
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
+\usepackage{fontspec} % Support custom fonts
+\setmainfont{Calibri} % Set the main font to Calibri
 \usepackage{setspace}
 \onehalfspacing
 \input{sections/glossary.tex}
 \makeglossaries
 \addbibresource{main.bib}
+
 \begin{document}
-	\pagestyle{plain}
-
-	\captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
-	\captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Tableau},labelsep=colon,textfont={it}}
-	\SetLipsumDefault{1}
-
-	\frontmatter
-
-	\begin{titlepage}
-
-
-		% -------------------------------------------------------------------
-		% You need to edit the details here
-		% -------------------------------------------------------------------
-
-		\begin{center}
-			\includegraphics[width=9cm]{images/iae.png}\\[0.5cm]
-			\linespread{1.2}\huge {\bfseries Report of internship in Schneider}\\[1cm]
-			\linespread{0.5}
-			{\Large Peiwen LI}\\[0.1cm]
-			{\large \emph{Sous la direction de :} Somebody}\\[0.1cm] % if applicable
-			{\large  \emph{entreprise :} Schneider}\\[1cm]
-			{\large
-			Grenoble IAE - INP, UGA\\
-			\today}
-		\end{center}
-	\end{titlepage}
-
-
+\pagestyle{empty}
+	\input{sections/titlepage.tex}
+	\input{sections/avertissement.tex}
 	% -------------------------------------------------------------------
 	% Declaration
 	% -------------------------------------------------------------------
-
-	\newpage
-	% \input{sections/declaration.tex}
+	\input{sections/declaration.tex}
 	% -------------------------------------------------------------------
 	% Abstract
 	% -------------------------------------------------------------------
-
 	\input{sections/abstract.tex}
-
-
 	% -------------------------------------------------------------------
-	% Contents, list of figures, list of tables
+	% Remercement
 	% -------------------------------------------------------------------
+	\input{sections/remerciement.tex}
 
+
+	\frontmatter
 	\tableofcontents
-	\listoffigures
-	\listoftables
-	
 	% -------------------------------------------------------------------
 	% Main sections (as required)
 	% -------------------------------------------------------------------
 
 	\mainmatter
+	\input{sections/avant-propos.tex}
 	\input{sections/introduction.tex}
+    \part{Théorie}
+	\input{sections/part1/chap1.tex}
+	\input{sections/part1/chap2.tex}
+	\part{Méthodologie}
+	\input{sections/part2/chap1.tex}
+	\part{Résultats}
+	\input{sections/part3/chap1.tex}
+
 
 	\input{sections/conclusion.tex}
-
-
+	\newpage
 
 	% -------------------------------------------------------------------
 	% Bibliography
 	% -------------------------------------------------------------------
-
 	\sloppy
 	\printbibliography
-	\addcontentsline{toc}{chapter}{Bibliographie}
-	%\printglossary[title={Glossaire},toctitle={Glossaire}]
-
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+	\printglossary[title={Glossaire},toctitle={Glossaire}]
 	% -------------------------------------------------------------------
 	% Appendices
 	% -------------------------------------------------------------------
-
 	\begin{appendices}
 		\input{sections/appendix/appendixA.tex}
 	\end{appendices}
-
+	% -------------------------------------------------------------------
+	% Table des matières finale
+	% -------------------------------------------------------------------
+    \backmatter
+	\etocsettocstyle{\section*{\contentsname}}{} % 控制样式
+	\etocsetnexttocdepth{subsubsection}             % 控制显示层级
+	\tableofcontents
 \end{document}
