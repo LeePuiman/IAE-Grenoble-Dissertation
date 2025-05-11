@@ -5,6 +5,7 @@
 \usepackage{alltt}
 \usepackage[margin=1.2in]{geometry}
 \usepackage[toc,page]{appendix}
+\usepackage{tcolorbox}
 \usepackage{graphicx}
 \usepackage[style=apa]{biblatex}
 \usepackage{lipsum}
@@ -21,6 +22,8 @@
 \usepackage[toc,xindy]{glossaries}
 \usepackage[automake]{glossaries-extra}
 \usepackage{listings}
+\usepackage{xcolor}
+\definecolor{ugablue}{RGB}{42, 46, 70} % 定义深蓝色
 \usepackage{fontspec} % Support custom fonts
 \setmainfont{Calibri} % Set the main font to Calibri
 \usepackage{setspace}
@@ -48,6 +51,7 @@
 
 
 	\frontmatter
+	\setcounter{tocdepth}{1}
 	\tableofcontents
 	% -------------------------------------------------------------------
 	% Main sections (as required)
@@ -63,8 +67,6 @@
 	\input{sections/part2/chap1.tex}
 	\part{Résultats}
 	\input{sections/part3/chap1.tex}
-
-
 	\input{sections/conclusion.tex}
 	\newpage
 
@@ -76,19 +78,22 @@
 	\addcontentsline{toc}{chapter}{Bibliography}
 	\newpage
 	\listoffigures
+	\addcontentsline{toc}{chapter}{Liste des figures}
 	\newpage
 	\listoftables
+	\addcontentsline{toc}{chapter}{Liste des tableaux}
 	\printglossary[title={Glossaire},toctitle={Glossaire}]
+	\backmatter
 	% -------------------------------------------------------------------
 	% Appendices
 	% -------------------------------------------------------------------
 	\begin{appendices}
 		\input{sections/appendix/appendixA.tex}
 	\end{appendices}
+		\newpage
 	% -------------------------------------------------------------------
 	% Table des matières finale
 	% -------------------------------------------------------------------
-    \backmatter
 	\etocsettocstyle{\section*{\contentsname}}{} % 控制样式
 	\etocsetnexttocdepth{subsubsection}             % 控制显示层级
 	\tableofcontents

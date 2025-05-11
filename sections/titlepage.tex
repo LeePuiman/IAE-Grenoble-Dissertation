@@ -5,57 +5,81 @@
     };
 \end{tikzpicture}
 \begin{center}
-    \vspace*{1.5cm}
-        {\textbf{Mémoire de Stage}} \\[1cm]
-        {\LARGE \textbf{Titre du mémoire}} \\[1cm]
-        {\large Sous-titre du mémoire} \\[2cm]
-        \begin{minipage}{0.5\textwidth}
-            \raggedright
-            \textbf{Présenté par :} Nom Prénom \\
-            \textbf{Entreprise d'accueil :} Schneider \\
-            \textbf{Date de stage :} du 10/10/2025 au 11/10/2025\\
-            \textbf{Tuteur entreprise :} XXXX\\
-            \textbf{Tuteur universitaire :} XXXXX \\[1cm]
-        
-            \textbf{Master 2 Pro.} \\
-            \textbf{Master Marketing} \\
-            \textbf{Spécialité (ou Parcours) }\\
-            \textbf{2024 - 2025} \\
-        \end{minipage} \\[2cm]
-        
-        \includegraphics[width=0.25\textwidth]{images/a0000-img002.png} \\
+        % {\textcolor{gray}{\textbf{Mémoire de Stage/ de recherche/ d'alternance (sélectionnez le bon terme)}}} \\[1cm]
+        % {\LARGE \textbf{Titre du mémoire}} \\[0.5cm]
+        % {\large Sous-titre du mémoire} \\[2cm]
+        \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.5mm, width=\textwidth, sharp corners, halign=center]
+            {\textcolor{gray}{\textbf{Mémoire de Stage/ de recherche/ d'alternance (sélectionnez le bon terme)}}} \\[1cm]
+            {\LARGE \textbf{Titre du mémoire}} \\[0.5cm]
+            {\large \textbf{Sous-titre du mémoire}} \\
+            \vspace*{1.5cm}
+        \end{tcolorbox}
+
+        \begin{center}
+            \begin{tcolorbox}[colframe=ugablue, colback=ugablue, boxrule=0mm, width=0.6\textwidth, sharp corners]
+                \textcolor{white}{\makebox[\textwidth][l]{~~~\large \textbf{Présenté par :} Nom Prénom}} \\
+                \smallskip
+                \textcolor{white}{\makebox[\textwidth][l]{~~~\textbf{Entreprise d'accueil :} Nom + Adresse}} \\
+                \smallskip
+                \textcolor{white}{\makebox[\textwidth][l]{~~~\textbf{Date de stage :} du 10/10/2025 au 11/10/2025}} \\
+                \smallskip
+                \textcolor{white}{\makebox[\textwidth][l]{~~~\textbf{Tuteur entreprise :} XXXX}} \\
+                \textcolor{white}{\makebox[\textwidth][l]{~~~\textbf{Tuteur universitaire :} XXXXX}}
+                \end{tcolorbox}
+        \end{center}
+        \begin{center}
+            \begin{tcolorbox}[colframe=ugablue, colback=ugablue, boxrule=0mm, width=0.6\textwidth, sharp corners]     
+                \textcolor{white}{\makebox[\textwidth][l]{\textbf{Master 1 ou 2 Pro. (FI, alt. ou FC) ou R}}} \\
+                \textcolor{white}{\makebox[\textwidth][l]{\textbf{Master Marketing}}} \\
+                \textcolor{white}{\makebox[\textwidth][l]{\textbf{Spécialité (ou Parcours) XXXX}}} \\
+                \textcolor{white}{\makebox[\textwidth][l]{\textbf{20XX - 20XX}}}
+            \end{tcolorbox}
+        \end{center}
+        \vspace*{1cm}
+        \includegraphics[width=0.3\textwidth]{images/a0000-img002.png} \\
 \end{center}
 \newpage
 
 % ---------- Page 2 ----------
 \begin{center}
     \vspace*{0.5cm}
-    {\Huge \textbf{Mémoire de Stage}} \\[1.5cm]
-    {\LARGE \textbf{Titre du mémoire}} \\[0.5cm]
-    {\large Sous-titre du mémoire} \\[2cm]
-    \vspace*{3cm}
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/a0000-img003.png}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/a0000-img002.png}
-    \end{minipage} \\[1cm]
+        \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.5mm, width=\textwidth, sharp corners, halign=center]
+            {\textcolor{gray}{\textbf{Mémoire de Stage/ de recherche/ d'alternance (sélectionnez le bon terme)}}} \\[1cm]
+            {\LARGE \textbf{Titre du mémoire}} \\[0.5cm]
+            {\large \textbf{Sous-titre du mémoire}} \\
+            \vspace*{1.5cm}
+        \end{tcolorbox}
+    \vspace*{5cm}
 \end{center}
+\begin{flushright}
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=\textwidth]{images/a0000-img003.png}
+    \end{minipage}%
+    \hspace{0.5cm}
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=\textwidth]{images/a0000-img002.png}
+    \end{minipage}
+\end{flushright}
+\vspace*{1cm}
+\begin{flushright}
+            \begin{tcolorbox}[colframe=white, colback=lightgray, boxrule=0mm, width=0.6\textwidth, sharp corners]
+                {\makebox[\textwidth][l]{~~~\large \textbf{Présenté par :} Nom Prénom}} \\
+                \smallskip
+                {\makebox[\textwidth][l]{~~~\textbf{Entreprise d'accueil :} Nom + Adresse}} \\
+                \smallskip
+                {\makebox[\textwidth][l]{~~~\textbf{Date de stage :} du 10/10/2025 au 11/10/2025}} \\
+                \smallskip
+                {\makebox[\textwidth][l]{~~~\textbf{Tuteur entreprise :} XXXX}} \\
+                {\makebox[\textwidth][l]{~~~\textbf{Tuteur universitaire :} XXXXX}}
+                \end{tcolorbox}
+\end{flushright}
 \begin{flushleft}
-    \vspace*{2cm}
-    \textbf{Présenté par :} Nom Prénom \\
-    \textbf{Entreprise d'accueil :} Schneider \\
-    \textbf{Date de stage :} du 10/10/2025 au 11/10/2025\\
-    \textbf{Tuteur entreprise :} XXXX\\
-    \textbf{Tuteur universitaire :} XXXXX \\
-
-    \textbf{Master 2 Pro.} \\
-    \textbf{Master Marketing} \\
-    \textbf{Spécialité (ou Parcours) }\\
-    \textbf{2024 - 2025} \\
+            \begin{tcolorbox}[colframe=white, colback=lightgray, boxrule=0mm, width=\textwidth, sharp corners]     
+                {\makebox[\textwidth][l]{\textbf{Master 1 ou 2 Pro. (FI, alt. ou FC) ou R}}} \\
+                {\makebox[\textwidth][l]{\textbf{Master Marketing}}} \\
+                {\makebox[\textwidth][l]{\textbf{Spécialité (ou Parcours) XXXX}}} \\
+                {\makebox[\textwidth][l]{\textbf{20XX - 20XX}}}
+            \end{tcolorbox}
 \end{flushleft}
 
 \newpage
